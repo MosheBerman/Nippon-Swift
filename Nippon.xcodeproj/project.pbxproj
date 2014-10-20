@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		463605A219F4165000DFA1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605A119F4165000DFA1F2 /* AppDelegate.swift */; };
-		463605A419F4165000DFA1F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605A319F4165000DFA1F2 /* ViewController.swift */; };
-		463605A719F4165000DFA1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463605A519F4165000DFA1F2 /* Main.storyboard */; };
 		463605A919F4165000DFA1F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463605A819F4165000DFA1F2 /* Images.xcassets */; };
 		463605AC19F4165000DFA1F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463605AA19F4165000DFA1F2 /* LaunchScreen.xib */; };
 		463605B819F4165000DFA1F2 /* NipponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605B719F4165000DFA1F2 /* NipponTests.swift */; };
+		463605C219F416D200DFA1F2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605C119F416D200DFA1F2 /* MenuTableViewController.swift */; };
+		4661EF0019F4678E00EB67D1 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */; };
+		46FFB2E419F46FAE00662A78 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFB2E319F46FAE00662A78 /* MenuActions.swift */; };
+		46FFB2E619F471E800662A78 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FFB2E519F471E800662A78 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		4636059C19F4165000DFA1F2 /* Nippon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nippon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463605A019F4165000DFA1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463605A119F4165000DFA1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		463605A319F4165000DFA1F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		463605A619F4165000DFA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		463605A819F4165000DFA1F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		463605AB19F4165000DFA1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		463605B119F4165000DFA1F2 /* NipponTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NipponTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		463605B619F4165000DFA1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463605B719F4165000DFA1F2 /* NipponTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponTests.swift; sourceTree = "<group>"; };
+		463605C119F416D200DFA1F2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		46FFB2E319F46FAE00662A78 /* MenuActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
+		46FFB2E519F471E800662A78 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FFB2E619F471E800662A78 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		4636059319F4165000DFA1F2 = {
 			isa = PBXGroup;
 			children = (
+				46FFB2E519F471E800662A78 /* iAd.framework */,
 				4636059E19F4165000DFA1F2 /* Nippon */,
 				463605B419F4165000DFA1F2 /* NipponTests */,
 				4636059D19F4165000DFA1F2 /* Products */,
@@ -78,8 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				463605A119F4165000DFA1F2 /* AppDelegate.swift */,
-				463605A319F4165000DFA1F2 /* ViewController.swift */,
-				463605A519F4165000DFA1F2 /* Main.storyboard */,
+				463605C119F416D200DFA1F2 /* MenuTableViewController.swift */,
+				4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */,
+				46FFB2E319F46FAE00662A78 /* MenuActions.swift */,
 				463605A819F4165000DFA1F2 /* Images.xcassets */,
 				463605AA19F4165000DFA1F2 /* LaunchScreen.xib */,
 				4636059F19F4165000DFA1F2 /* Supporting Files */,
@@ -161,6 +168,7 @@
 				TargetAttributes = {
 					4636059B19F4165000DFA1F2 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = HK64RUWW3P;
 					};
 					463605B019F4165000DFA1F2 = {
 						CreatedOnToolsVersion = 6.0;
@@ -192,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463605A719F4165000DFA1F2 /* Main.storyboard in Resources */,
 				463605AC19F4165000DFA1F2 /* LaunchScreen.xib in Resources */,
 				463605A919F4165000DFA1F2 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463605A419F4165000DFA1F2 /* ViewController.swift in Sources */,
+				463605C219F416D200DFA1F2 /* MenuTableViewController.swift in Sources */,
 				463605A219F4165000DFA1F2 /* AppDelegate.swift in Sources */,
+				46FFB2E419F46FAE00662A78 /* MenuActions.swift in Sources */,
+				4661EF0019F4678E00EB67D1 /* MenuHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +245,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		463605A519F4165000DFA1F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				463605A619F4165000DFA1F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		463605AA19F4165000DFA1F2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Nippon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Nippon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +408,7 @@
 				463605BD19F4165000DFA1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		463605BE19F4165000DFA1F2 /* Build configuration list for PBXNativeTarget "NipponTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +417,7 @@
 				463605C019F4165000DFA1F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
