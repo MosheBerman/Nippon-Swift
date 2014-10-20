@@ -23,7 +23,9 @@ class MenuTableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        let nib: UINib = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.tableHeaderView = MenuHeaderView()
         
         let statusBarHeight = CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame)
@@ -71,11 +73,16 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as MenuTableViewCell
 
-        cell.textLabel?.text = self.dataSource()[indexPath.section][indexPath.row]
+        cell.primaryLabel?.text = self.dataSource()[indexPath.section][indexPath.row]
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
     
     /*
