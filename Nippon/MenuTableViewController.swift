@@ -28,6 +28,7 @@ class MenuTableViewController: UITableViewController {
         self.tableView.registerNib(nib, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.tableHeaderView = MenuHeaderView()
         
+        
         let statusBarHeight = CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame)
         self.tableView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length + statusBarHeight, 0, 0, 0)
         
@@ -82,7 +83,18 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title : String? = nil;
         
+        return title
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        var header : UITableViewHeaderFooterView = view as UITableViewHeaderFooterView
+        
+        header.textLabel.textColor = UIColor.whiteColor()
     }
     
     /*
@@ -133,8 +145,9 @@ class MenuTableViewController: UITableViewController {
     func dataSource() -> Array<Array<String>> {
     
         var data = [
-            ["Tap To Play"],
-            ["How To Play", "About Nippon", "Credits"],
+            ["Start a New Game", "Continue Where You Left Off"],
+            ["High Scores", "Achievements"],
+            ["How To Play", "Invite Some Friends to Play", "Leave a Rating on the App Store"],
         ]
         
         return data
