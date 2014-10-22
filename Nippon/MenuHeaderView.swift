@@ -26,7 +26,7 @@ class MenuHeaderView : UIView {
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont(name: "Avenir-Light", size: 36.0)
         
-        super.init(frame: CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), 184))
+        super.init(frame: CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), 168))
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -47,7 +47,7 @@ class MenuHeaderView : UIView {
         self.init(frame: CGRectZero)
     }
     
-    /*
+    /*f
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect)
@@ -58,8 +58,6 @@ class MenuHeaderView : UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        NSLog("Layout Subviews");
         
         /**
         *   Define a standard margin.
@@ -79,10 +77,9 @@ class MenuHeaderView : UIView {
         *   Constraints for the label - uses our class extension.
         */
         
-        let labelLeftConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Leading, equalToItem: self, attribute: .Left, constant: margin)
-        let labelRightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Trailing, equalToItem: self, attribute: .Right, constant: margin)
-        let labelHeightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Height, equalToItem: self.image, attribute: .Height)
-        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Top, equalToItem: self, attribute: .Top, constant: margin)
+        let labelCenterConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .CenterX, equalToItem: self, attribute: .CenterX, constant: 0)
+        let labelHeightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Height, relatedBy: .Equal , toItem: self.image, attribute: .Height, multiplier: 0.8, constant: 1)
+        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Top, equalToItem: self, attribute: .Top, constant: 0)
         
         /**
         *   A constraint for the height of the view.
@@ -110,7 +107,7 @@ class MenuHeaderView : UIView {
         *   Install the constraints.
         */
         
-        let constraintsToAdd = [labelLeftConstraint, labelRightConstraint, labelHeightConstraint, labelTopConstraint, imageTop, imageCenterConstraint, imageWidthConstraint]
+        let constraintsToAdd = [labelCenterConstraint, labelHeightConstraint, labelTopConstraint, imageTop, imageCenterConstraint, imageWidthConstraint]
         
         for constraint in constraintsToAdd {
             self.addConstraint(constraint)
