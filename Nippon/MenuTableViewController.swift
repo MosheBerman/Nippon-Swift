@@ -37,6 +37,8 @@ class MenuTableViewController: UITableViewController {
         self.tableView.backgroundColor = color
         
         self.canDisplayBannerAds = true
+        
+        self.tableView.indicatorStyle = .White;
     }
 
     override func didReceiveMemoryWarning() {
@@ -142,12 +144,23 @@ class MenuTableViewController: UITableViewController {
     }
     */
     
-    func dataSource() -> Array<Array<String>> {
+    func dataSource() -> Array<Array<Dictionary<String, MenuAction>>> {
     
         var data = [
-            ["Start a New Game", "Continue Where You Left Off"],
-            ["High Scores", "Achievements"],
-            ["How To Play", "Invite Some Friends to Play", "Leave a Rating on the App Store"],
+            [
+                ["Play a New Game" : .BeginClassicGame],
+                ["Continue Playing" : .ContinueClassicGame]
+            ],
+            [
+                ["High Scores" : .ShowHighScores],
+                ["Achievements" : .ShowAchievements]
+            ],
+            
+            [
+                ["How To Play" : .ShowInstructions],
+                ["Play with Friends" : .InviteFriends],
+                ["Rate on the App Store" : .RateOnAppStore]
+            ],
         ]
         
         return data
