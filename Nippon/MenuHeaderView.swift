@@ -15,7 +15,7 @@ class MenuHeaderView : UIView {
     
     override init(frame: CGRect) {
         
-        image = UIImageView(image: UIImage(named: "SushiBanner").imageWithRenderingMode(.AlwaysTemplate))
+        image = UIImageView(image: UIImage(named: "SushiBanner")!.imageWithRenderingMode(.AlwaysTemplate))
         image.tintColor = UIColor.whiteColor()
         image.contentMode = UIViewContentMode.ScaleAspectFit
         
@@ -31,7 +31,7 @@ class MenuHeaderView : UIView {
     
     required init(coder aDecoder: NSCoder) {
         
-        image = UIImageView(image: UIImage(named: "SushiBanner").imageWithRenderingMode(.AlwaysTemplate))
+        image = UIImageView(image: UIImage(named: "SushiBanner")!.imageWithRenderingMode(.AlwaysTemplate))
         image.tintColor = UIColor.whiteColor()
         image.setTranslatesAutoresizingMaskIntoConstraints(false)
         
@@ -79,7 +79,7 @@ class MenuHeaderView : UIView {
         
         let labelCenterConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .CenterX, equalToItem: self, attribute: .CenterX, constant: 0)
         let labelHeightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Height, relatedBy: .Equal , toItem: self.image, attribute: .Height, multiplier: 0.8, constant: 1)
-        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Top, equalToItem: self, attribute: .Top, constant: 0)
+        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Top, equalToItem: self, attribute: .Top, constant: 16)
         
         /**
         *   A constraint for the height of the view.
