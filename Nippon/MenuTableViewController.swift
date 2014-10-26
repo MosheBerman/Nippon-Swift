@@ -78,7 +78,7 @@ class MenuTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as MenuTableViewCell
 
-        cell.primaryLabel?.text = self.dataSource()[indexPath.section][indexPath.row]
+        cell.primaryLabel?.text = self.dataSource()[indexPath.section][indexPath.row].key
 
         return cell
     }
@@ -148,7 +148,7 @@ class MenuTableViewController: UITableViewController {
     
         var data = [
             [
-                ["Play a New Game" : .BeginClassicGame],
+                ["Play New Game" : .BeginClassicGame],
                 ["Continue Playing" : .ContinueClassicGame]
             ],
             [
