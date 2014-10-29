@@ -18,8 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         menu = MenuTableViewController(style: .Grouped)
+
+        //  Wrap the whole thing in a navigation controller.
+        let navController = UINavigationController(rootViewController: menu!)
+        navController.setNavigationBarHidden(true, animated: false)
         
-        window?.rootViewController = menu
+        //
+        
+        let c = Colors()
+        UINavigationBar.appearance().barTintColor = c.redColor
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
+        //  Show the window.
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
         return true
