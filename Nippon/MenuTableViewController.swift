@@ -32,7 +32,9 @@ class MenuTableViewController: UITableViewController {
         let statusBarHeight = CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame)
         self.tableView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length + statusBarHeight, 0, 0, 0)
         
-        let color:UIColor = UIColor(red: 0.76, green: 0.14, blue: 0.11, alpha: 1.00)
+        let c = Colors()
+        
+        let color:UIColor = c.redColor
         
         self.tableView.backgroundColor = color
         
@@ -83,6 +85,9 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let s = SoloGameViewController(nibName: "SoloGameViewController", bundle: nil)
+        self.navigationController?.pushViewController(s, animated: true)
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -145,9 +150,9 @@ class MenuTableViewController: UITableViewController {
     func dataSource() -> Array<Array<String>> {
         
         var data = [
-            ["Start a New Game", "Continue Where You Left Off"],
+            ["Play Solo", "Play with Friends", "Continue a Solo Game"],
             ["High Scores", "Achievements"],
-            ["How To Play", "Invite Some Friends to Play", "Leave a Rating on the App Store"],
+            ["How To Play", "Rate on the App Store"],
         ]
         
         return data
