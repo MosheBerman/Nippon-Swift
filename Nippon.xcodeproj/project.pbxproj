@@ -12,6 +12,9 @@
 		463605AC19F4165000DFA1F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463605AA19F4165000DFA1F2 /* LaunchScreen.xib */; };
 		463605B819F4165000DFA1F2 /* NipponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605B719F4165000DFA1F2 /* NipponTests.swift */; };
 		463605C219F416D200DFA1F2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463605C119F416D200DFA1F2 /* MenuTableViewController.swift */; };
+		463F5BCE19FF1175009461F0 /* SoloGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F5BCC19FF1175009461F0 /* SoloGameViewController.swift */; };
+		463F5BCF19FF1175009461F0 /* SoloGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463F5BCD19FF1175009461F0 /* SoloGameViewController.xib */; };
+		463F5BD119FF11E7009461F0 /* GameColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F5BD019FF11E7009461F0 /* GameColors.swift */; };
 		4661EF0019F4678E00EB67D1 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */; };
 		466C57C819F609790045AD9B /* ConvenientConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C57C719F609790045AD9B /* ConvenientConstraints.swift */; };
 		46FFB2E419F46FAE00662A78 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFB2E319F46FAE00662A78 /* MenuActions.swift */; };
@@ -40,6 +43,9 @@
 		463605B619F4165000DFA1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463605B719F4165000DFA1F2 /* NipponTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipponTests.swift; sourceTree = "<group>"; };
 		463605C119F416D200DFA1F2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		463F5BCC19FF1175009461F0 /* SoloGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoloGameViewController.swift; sourceTree = "<group>"; };
+		463F5BCD19FF1175009461F0 /* SoloGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoloGameViewController.xib; sourceTree = "<group>"; };
+		463F5BD019FF11E7009461F0 /* GameColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColors.swift; sourceTree = "<group>"; };
 		4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		466C57C719F609790045AD9B /* ConvenientConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenientConstraints.swift; sourceTree = "<group>"; };
 		46FFB2E319F46FAE00662A78 /* MenuActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 				46FFB2E319F46FAE00662A78 /* MenuActions.swift */,
 				46FFB2E719F4C02100662A78 /* MenuTableViewCell.swift */,
 				46FFB2E819F4C02100662A78 /* MenuTableViewCell.xib */,
+				463F5BCC19FF1175009461F0 /* SoloGameViewController.swift */,
+				463F5BCD19FF1175009461F0 /* SoloGameViewController.xib */,
+				463F5BD019FF11E7009461F0 /* GameColors.swift */,
 				463605A819F4165000DFA1F2 /* Images.xcassets */,
 				463605AA19F4165000DFA1F2 /* LaunchScreen.xib */,
 				4636059F19F4165000DFA1F2 /* Supporting Files */,
@@ -210,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46FFB2EA19F4C02100662A78 /* MenuTableViewCell.xib in Resources */,
+				463F5BCF19FF1175009461F0 /* SoloGameViewController.xib in Resources */,
 				463605AC19F4165000DFA1F2 /* LaunchScreen.xib in Resources */,
 				463605A919F4165000DFA1F2 /* Images.xcassets in Resources */,
 			);
@@ -232,9 +242,11 @@
 				463605C219F416D200DFA1F2 /* MenuTableViewController.swift in Sources */,
 				466C57C819F609790045AD9B /* ConvenientConstraints.swift in Sources */,
 				463605A219F4165000DFA1F2 /* AppDelegate.swift in Sources */,
+				463F5BCE19FF1175009461F0 /* SoloGameViewController.swift in Sources */,
 				46FFB2E419F46FAE00662A78 /* MenuActions.swift in Sources */,
 				4661EF0019F4678E00EB67D1 /* MenuHeaderView.swift in Sources */,
 				46FFB2E919F4C02100662A78 /* MenuTableViewCell.swift in Sources */,
+				463F5BD119FF11E7009461F0 /* GameColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
