@@ -16,16 +16,28 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="il7-WP-2yC">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRb-Ww-Lce"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HQK-6z-SYE">
+                            <rect key="frame" x="20" y="80" width="560" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="nLR-OA-Gti"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W5f-uV-5nh">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
                     <color key="backgroundColor" red="0.70196078429999997" green="0.12941176469999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="B99-Nk-CLh"/>
                         <constraint firstAttribute="height" constant="200" id="Ip0-wb-05v"/>
+                        <constraint firstAttribute="trailing" secondItem="HQK-6z-SYE" secondAttribute="trailing" constant="20" id="Zul-K8-o6l"/>
+                        <constraint firstAttribute="bottom" secondItem="HQK-6z-SYE" secondAttribute="bottom" constant="20" id="j83-oK-Gjq"/>
+                        <constraint firstItem="HQK-6z-SYE" firstAttribute="leading" secondItem="il7-WP-2yC" secondAttribute="leading" constant="20" id="ypR-hK-26q"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="B99-Nk-CLh"/>
-                        </mask>
-                    </variation>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iXw-CC-Zmw">
                     <rect key="frame" x="20" y="220" width="560" height="360"/>
