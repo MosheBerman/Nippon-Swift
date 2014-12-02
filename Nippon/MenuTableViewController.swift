@@ -37,6 +37,7 @@ class MenuTableViewController: UITableViewController {
         let color:UIColor = c.redColor
         
         self.tableView.backgroundColor = color
+        self.tableView.separatorStyle = .None
         
         self.canDisplayBannerAds = true
     }
