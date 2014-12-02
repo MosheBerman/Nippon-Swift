@@ -15,6 +15,13 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.primaryLabel?.sizeToFit()
+        
+        if let bounds = self.primaryLabel?.bounds {
+            self.primaryLabel?.layer.cornerRadius = CGRectGetHeight(bounds) / 2.0
+        }
+        self.primaryLabel?.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -47,18 +54,20 @@ class MenuTableViewCell: UITableViewCell {
     
     func setTapped(tapped: Bool) {
         
-        var backgroundColor = UIColor(white: 0.97, alpha: 0.1)
+        var backgroundColor = UIColor.clearColor()
         var titleColor = UIColor.whiteColor()
         var subtitleColor = UIColor.lightGrayColor()
+        var labelBackgrounColor = UIColor.clearColor()
         
         if tapped {
-            backgroundColor = UIColor(white: 0.885, alpha: 0.6)
+            labelBackgrounColor = UIColor(white: 0.885, alpha: 0.6)
             subtitleColor = titleColor.colorWithAlphaComponent(0.5)
         }
         
         self.backgroundColor = backgroundColor
 
         self.primaryLabel?.textColor = titleColor
+        self.primaryLabel?.backgroundColor = labelBackgrounColor;
         
     }
 }
