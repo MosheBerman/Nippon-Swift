@@ -188,9 +188,11 @@
 					4636059B19F4165000DFA1F2 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = HK64RUWW3P;
+						LastSwiftMigration = 0830;
 					};
 					463605B019F4165000DFA1F2 = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = 4636059B19F4165000DFA1F2;
 					};
 				};
@@ -382,6 +384,7 @@
 				INFOPLIST_FILE = Nippon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -393,6 +396,7 @@
 				INFOPLIST_FILE = Nippon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -411,6 +415,7 @@
 				INFOPLIST_FILE = NipponTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nippon.app/Nippon";
 			};
 			name = Debug;
@@ -426,6 +431,7 @@
 				INFOPLIST_FILE = NipponTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nippon.app/Nippon";
 			};
 			name = Release;

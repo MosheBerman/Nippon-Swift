@@ -15,36 +15,36 @@ class MenuHeaderView : UIView {
     
     override init(frame: CGRect) {
         
-        image = UIImageView(image: UIImage(named: "SushiBanner")!.imageWithRenderingMode(.AlwaysTemplate))
-        image.tintColor = UIColor.whiteColor()
-        image.contentMode = UIViewContentMode.ScaleAspectFit
+        image = UIImageView(image: UIImage(named: "SushiBanner")!.withRenderingMode(.alwaysTemplate))
+        image.tintColor = UIColor.white
+        image.contentMode = UIViewContentMode.scaleAspectFit
         
         titleLabel = UILabel()
-        titleLabel.textAlignment = .Center
-        titleLabel.backgroundColor = UIColor.clearColor()
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = UIColor.clear
         titleLabel.text = "Nippon"
-        titleLabel.textColor = UIColor.whiteColor()
+        titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont(name: "Avenir-Light", size: 36.0)
         
-        super.init(frame: CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), 168))
+        super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 168))
     }
     
-    required init(coder aDecoder: NSCoder) {
-        
-        image = UIImageView(image: UIImage(named: "SushiBanner")!.imageWithRenderingMode(.AlwaysTemplate))
-        image.tintColor = UIColor.whiteColor()
-        image.setTranslatesAutoresizingMaskIntoConstraints(false)
+    required init?(coder aDecoder: NSCoder)
+    {
+        image = UIImageView(image: UIImage(named: "SushiBanner")!.withRenderingMode(.alwaysTemplate))
+        image.tintColor = UIColor.white
+        image.translatesAutoresizingMaskIntoConstraints = false
         
         titleLabel = UILabel()
-        titleLabel.textAlignment = .Center
-        titleLabel.backgroundColor = UIColor.clearColor()
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = UIColor.clear
         titleLabel.font = UIFont(name: "Avenir-Light", size: 36.0)
         
         super.init(coder: aDecoder)
     }
     
-    override convenience init() {
-        self.init(frame: CGRectZero)
+    convenience init() {
+        self.init(frame: CGRect.zero)
     }
     
     /*f
@@ -69,23 +69,23 @@ class MenuHeaderView : UIView {
         *   Constrains for the image
         */
         
-        let imageCenterConstraint = NSLayoutConstraint(item: self.image, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0)
-        let imageTop = NSLayoutConstraint(item: self.image, attribute: .Top, equalToItem: self.titleLabel, attribute: .Bottom, constant: margin)
-        let imageWidthConstraint = NSLayoutConstraint(item: self.image, attribute: .Width, equalToItem: self, attribute: .Width, constant: -80.0)
+        let imageCenterConstraint = NSLayoutConstraint(item: self.image, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let imageTop = NSLayoutConstraint(item: self.image, attribute: .top, equalToItem: self.titleLabel, attribute: .bottom, constant: margin)
+        let imageWidthConstraint = NSLayoutConstraint(item: self.image, attribute: .width, equalToItem: self, attribute: .width, constant: -80.0)
         
         /**
         *   Constraints for the label - uses our class extension.
         */
         
-        let labelCenterConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .CenterX, equalToItem: self, attribute: .CenterX, constant: 0)
-        let labelHeightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Height, relatedBy: .Equal , toItem: self.image, attribute: .Height, multiplier: 0.8, constant: 1)
-        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .Top, equalToItem: self, attribute: .Top, constant: 16)
+        let labelCenterConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .centerX, equalToItem: self, attribute: .centerX, constant: 0)
+        let labelHeightConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .height, relatedBy: .equal , toItem: self.image, attribute: .height, multiplier: 0.8, constant: 1)
+        let labelTopConstraint = NSLayoutConstraint(item: self.titleLabel, attribute: .top, equalToItem: self, attribute: .top, constant: 16)
         
         /**
         *   A constraint for the height of the view.
         */
         
-        let imageHeight = CGRectGetHeight(self.image.frame)
+        let imageHeight = self.image.frame.height
         
         /**
         *   Install the views in the hierarchy.
@@ -100,7 +100,7 @@ class MenuHeaderView : UIView {
         
         for view in self.subviews
         {
-            view.setTranslatesAutoresizingMaskIntoConstraints(false)
+            view.translatesAutoresizingMaskIntoConstraints = false
         }
         
         /**

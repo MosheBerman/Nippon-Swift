@@ -17,7 +17,7 @@ extension NSLayoutConstraint {
     
     convenience init(item view1: AnyObject, attribute attr1: NSLayoutAttribute, equalToItem view2: AnyObject?, attribute attr2: NSLayoutAttribute, constant c: CGFloat) {
         
-        self.init(item: view1, attribute: attr1, relatedBy: .Equal, toItem: view2, attribute: attr2, multiplier: 1.0, constant: c);
+        self.init(item: view1, attribute: attr1, relatedBy: .equal, toItem: view2, attribute: attr2, multiplier: 1.0, constant: c);
     }
     
     /**
@@ -28,6 +28,6 @@ extension NSLayoutConstraint {
     
     convenience init(item view1: AnyObject, attribute attr1: NSLayoutAttribute, equalToItem view2: AnyObject?, attribute attr2: NSLayoutAttribute) {
     
-        self.init(item: view1, attribute: attr1, relatedBy: .Equal, toItem: view2, attribute: attr2, multiplier: 1.0, constant: 0);
+        self.init(item: view1, attribute: attr1, relatedBy: .equal, toItem: view2, attribute: attr2, multiplier: 1.0, constant: 0);
     }
 }

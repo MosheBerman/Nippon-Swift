@@ -19,18 +19,18 @@ class MenuTableViewCell: UITableViewCell {
         self.primaryLabel?.sizeToFit()
         
         if let bounds = self.primaryLabel?.bounds {
-            self.primaryLabel?.layer.cornerRadius = CGRectGetHeight(bounds) / 2.0
+            self.primaryLabel?.layer.cornerRadius = bounds.height / 2.0
         }
         self.primaryLabel?.clipsToBounds = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
         
         if animated {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
                 self.setTapped(selected)
             })
         }
@@ -40,9 +40,9 @@ class MenuTableViewCell: UITableViewCell {
         }
     }
     
-    override func setHighlighted(highlighted: Bool, animated: Bool) {
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         if animated {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
                 self.setTapped(highlighted)
             })
         }
@@ -52,16 +52,16 @@ class MenuTableViewCell: UITableViewCell {
         }
     }
     
-    func setTapped(tapped: Bool) {
+    func setTapped(_ tapped: Bool) {
         
-        var backgroundColor = UIColor.clearColor()
-        var titleColor = UIColor.whiteColor()
-        var subtitleColor = UIColor.lightGrayColor()
-        var labelBackgrounColor = UIColor.clearColor()
+        let backgroundColor = UIColor.clear
+        let titleColor = UIColor.white
+        var subtitleColor = UIColor.lightGray
+        var labelBackgrounColor = UIColor.clear
         
         if tapped {
             labelBackgrounColor = UIColor(white: 0.885, alpha: 0.6)
-            subtitleColor = titleColor.colorWithAlphaComponent(0.5)
+            subtitleColor = titleColor.withAlphaComponent(0.5)
         }
         
         self.backgroundColor = backgroundColor

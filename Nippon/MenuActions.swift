@@ -9,7 +9,7 @@
 import Foundation
 
 enum MenuAction : Int {
-    case BeginClassicGame, ContinueClassicGame
-    case ShowHighScores, ShowAchievements
-    case ShowInstructions, InviteFriends, RateOnAppStore
+    case beginClassicGame, continueClassicGame
+    case showHighScores, showAchievements
+    case showInstructions, inviteFriends, rateOnAppStore
 }

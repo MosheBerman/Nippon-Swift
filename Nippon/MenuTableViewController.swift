@@ -25,11 +25,11 @@ class MenuTableViewController: UITableViewController {
         
         let nib: UINib = UINib(nibName: "MenuTableViewCell", bundle: nil)
         
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "reuseIdentifier")
+        self.tableView.register(nib, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.tableHeaderView = MenuHeaderView()
         
         
-        let statusBarHeight = CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame)
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
         self.tableView.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length + statusBarHeight, 0, 0, 0)
         
         let c = Colors()
@@ -37,7 +37,7 @@ class MenuTableViewController: UITableViewController {
         let color:UIColor = c.redColor
         
         self.tableView.backgroundColor = color
-        self.tableView.separatorStyle = .None
+        self.tableView.separatorStyle = .none
         
         self.canDisplayBannerAds = true
     }
@@ -49,10 +49,10 @@ class MenuTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         
-        var count: Int = self.dataSource().count
+        let count: Int = self.dataSource().count
         
         if count == 0
         {
@@ -62,7 +62,7 @@ class MenuTableViewController: UITableViewController {
         return count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         
         var count: Int = 0
@@ -75,32 +75,32 @@ class MenuTableViewController: UITableViewController {
         return count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as MenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! MenuTableViewCell
         
         cell.primaryLabel?.text = self.dataSource()[indexPath.section][indexPath.row]
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         let s = SoloGameViewController(nibName: "SoloGameViewController", bundle: nil)
         self.navigationController?.pushViewController(s, animated: true)
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var title : String? = nil;
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title : String? = nil;
         
         return title
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        var header : UITableViewHeaderFooterView = view as UITableViewHeaderFooterView
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         
-        header.textLabel.textColor = UIColor.whiteColor()
+        header.textLabel?.textColor = UIColor.white
     }
     
     /*
@@ -150,7 +150,7 @@ class MenuTableViewController: UITableViewController {
     
     func dataSource() -> Array<Array<String>> {
         
-        var data = [
+        let data = [
             ["Play Solo", "Play with Friends", "Continue a Solo Game"],
             ["High Scores", "Achievements"],
             ["How To Play", "Rate on the App Store"],
