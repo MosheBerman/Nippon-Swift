@@ -18,7 +18,6 @@
 		4661EF0019F4678E00EB67D1 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */; };
 		466C57C819F609790045AD9B /* ConvenientConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466C57C719F609790045AD9B /* ConvenientConstraints.swift */; };
 		46FFB2E419F46FAE00662A78 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFB2E319F46FAE00662A78 /* MenuActions.swift */; };
-		46FFB2E619F471E800662A78 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FFB2E519F471E800662A78 /* iAd.framework */; };
 		46FFB2E919F4C02100662A78 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FFB2E719F4C02100662A78 /* MenuTableViewCell.swift */; };
 		46FFB2EA19F4C02100662A78 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FFB2E819F4C02100662A78 /* MenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		4661EEFF19F4678E00EB67D1 /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		466C57C719F609790045AD9B /* ConvenientConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenientConstraints.swift; sourceTree = "<group>"; };
 		46FFB2E319F46FAE00662A78 /* MenuActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
-		46FFB2E519F471E800662A78 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		46FFB2E719F4C02100662A78 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		46FFB2E819F4C02100662A78 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46FFB2E619F471E800662A78 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +73,6 @@
 		4636059319F4165000DFA1F2 = {
 			isa = PBXGroup;
 			children = (
-				46FFB2E519F471E800662A78 /* iAd.framework */,
 				4636059E19F4165000DFA1F2 /* Nippon */,
 				463605B419F4165000DFA1F2 /* NipponTests */,
 				4636059D19F4165000DFA1F2 /* Products */,
